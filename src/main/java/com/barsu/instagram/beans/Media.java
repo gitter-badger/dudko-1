@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Kotsuba on 08.12.2015.
  */
 public class Media implements Cloneable {
-        private int id;
+        private String id;
         private String Image_low;
         private String Image_thumb;
         private String Image_std;
@@ -30,11 +30,11 @@ public class Media implements Cloneable {
         this.tags = media.tags;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

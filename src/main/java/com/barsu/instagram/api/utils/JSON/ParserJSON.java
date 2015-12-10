@@ -22,7 +22,7 @@ public class ParserJSON implements Parser{
         JSONObject jsonObject = new JSONObject(json);
         if(isMetaCode(jsonObject)) {
             JSONObject data = jsonObject.getJSONObject("data");
-            user.setId(data.getInt("id"));
+            user.setId(data.getString("id"));
             user.setUsername(data.getString("username"));
             user.setProfile_picture(data.getString("profile_picture"));
 
@@ -45,7 +45,7 @@ public class ParserJSON implements Parser{
             JSONArray jsonArray = jsonObject.getJSONArray("data");
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject data = jsonArray.getJSONObject(i);
-                user.setId(data.getInt("id"));
+                user.setId(data.getString("id"));
                 user.setUsername(data.getString("username"));
                 user.setFirst_name(data.getString("first_name"));
                 user.setLast_name(data.getString("last_name"));
@@ -69,14 +69,14 @@ public class ParserJSON implements Parser{
                 JSONObject data = jsonArray.getJSONObject(i);
 
                 String media_id=data.getString("id");
-                media.setId(Integer.valueOf(media_id.substring(0,media_id.lastIndexOf("_"))));
+                media.setId(media_id.substring(0,media_id.lastIndexOf("_")));
                 media.setCreated_time(new Date(data.getLong("created_time")));
                 media.setLink(data.getString("link"));
                 User user = new User();
                 JSONObject userinfo = data.getJSONObject("user");
                 user.setUsername(userinfo.getString("username"));
                 user.setProfile_picture(userinfo.getString("profile_picture"));
-                user.setId(userinfo.getInt("id"));
+                user.setId(userinfo.getString("id"));
                 media.setUser(user);
 
                 JSONObject img = data.getJSONObject("images");
@@ -124,7 +124,7 @@ public class ParserJSON implements Parser{
                 JSONObject from = data.getJSONObject("from");
                 comment.setProfile_picture(from.getString("profile_picture"));
                 comment.setUsername(from.getString("username"));
-                comment.setIdUser(from.getInt("id"));
+                comment.setIdUser(from.getString("id"));
                 comment.setFull_name(from.getString("full_name"));
 
                 commentList.add(comment.clone());

@@ -25,6 +25,6 @@ public class Relationship {
     private String username;
     private String profile_picture;
     private String full_name;
-    private int id;
+    private String id;
 
 }

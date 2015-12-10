@@ -25,7 +25,7 @@ public class Comment {
   * */
     private Date created_time;
     private String text;
-    private int idUser;
+    private String idUser;
     private String username;
     private String profile_picture;
     private String full_name;
@@ -59,11 +59,11 @@ public class Comment {
         this.text = text;
     }
 
-    public int getIdUser() {
+    public String getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(int idUser) {
+    public void setIdUser(String idUser) {
         this.idUser = idUser;
     }
 

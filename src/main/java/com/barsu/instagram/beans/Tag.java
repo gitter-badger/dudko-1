@@ -17,5 +17,5 @@ public class Tag {
 
 
     private String name;
-    private int media_count;
+    private String media_count;
 }

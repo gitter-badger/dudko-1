@@ -27,5 +27,5 @@ public class Like {
     private String first_name;
     private String last_name;
     private String type;
-    private int  id;
+    private String  id;
 }

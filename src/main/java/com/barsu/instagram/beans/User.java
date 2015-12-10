@@ -57,7 +57,7 @@ public class User implements Cloneable {
     private String first_name;
     private String last_name;
     private String profile_picture;
-    private int id;
+    private String id;
 
     private int media;
     private int follows;
@@ -87,7 +87,7 @@ public class User implements Cloneable {
         this.follows = follows;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -111,7 +111,7 @@ public class User implements Cloneable {
         return profile_picture;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
