@@ -67,8 +67,9 @@ public class ParserJSON implements Parser{
             JSONArray jsonArray = jsonObject.getJSONArray("data");
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject data = jsonArray.getJSONObject(i);
-               //parseInt �� ��������
-               // media.setId(Integer.valueOf(data.getString("id")));
+
+                String media_id=data.getString("id");
+                media.setId(Integer.valueOf(media_id.substring(0,media_id.lastIndexOf("_"))));
                 media.setCreated_time(new Date(data.getLong("created_time")));
                 media.setLink(data.getString("link"));
                 User user = new User();
