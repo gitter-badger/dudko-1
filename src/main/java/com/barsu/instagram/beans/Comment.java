@@ -29,7 +29,7 @@ public class Comment {
     private String username;
     private String profile_picture;
     private String full_name;
-    private int id;
+    private String id;
 
     public Comment(){}
 
@@ -91,11 +91,11 @@ public class Comment {
         this.full_name = full_name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

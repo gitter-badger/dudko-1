@@ -117,7 +117,7 @@ public class ParserJSON implements Parser{
             JSONArray jsonArray = jsonObject.getJSONArray("data");
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject data = jsonArray.getJSONObject(i);
-                comment.setId(data.getInt("id"));
+                comment.setId(data.getString("id"));
                 comment.setText(data.getString("text"));
                 comment.setCreated_time(new Date(data.getLong("created_time")));
 
