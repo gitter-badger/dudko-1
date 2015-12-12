@@ -47,9 +47,8 @@ public class ParserJSON implements Parser{
                 JSONObject data = jsonArray.getJSONObject(i);
                 user.setId(data.getString("id"));
                 user.setUsername(data.getString("username"));
-                user.setFirst_name(data.getString("first_name"));
-                user.setLast_name(data.getString("last_name"));
                 user.setProfile_picture("profile_picture");
+                user.setLast_name("full_name");
                 userList.add(user.clone());
             }
         }
